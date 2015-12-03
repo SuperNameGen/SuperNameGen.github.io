@@ -42,14 +42,14 @@ h1 {
 	font-size:450%;
 }
 /*'superhero' option css*/
-#superhero {
+#boy {
 	text-align:center;
 	cursor:pointer;
 	font-family:'Krona One', sans-serif;
 	color:#ffffff;
 	font-size:200%;
 }
-#superhero:hover {
+#boy:hover {
 	color:#005be6;
 }
 /*'or' css*/
@@ -60,141 +60,55 @@ p2 {
 	font-size:150%;
 }
 /*'super-villain' option css*/
-#supervillain {
+#girl {
 	text-align:center;
 	cursor:pointer;
 	font-family:'Krona One', sans-serif;
 	color:#ffffff;
 	font-size:200%;
 }
-#supervillain:hover {
+#girl:hover {
 	color:#e60000;
 }
 /*'surprise me' css*/
-#random {
+#neutral {
 	text-align:center;
-	background-color:transparent;
 	cursor:pointer;
 	font-family:'Krona One', sans-serif;
 	color:#ffffff;
+	font-size:200%;
 }
-#random:hover {
-	color:#990099;
-}
-/*'your name' css*/
-#present {
-	text-align:center;
-	font-family:'Yanone Kaffeesatz', sans-serif;
-	color:#bfbfbf;
-	font-size:300%;
-}
-/*name generated css*/
-#result {
-	text-align:center;
-	padding-top:10px;
-	font-family:'Krona One', sans-serif;
-	color:#848484;
-	font-size:225%;
+#neutral:hover {
+	color:#34aa4a;
 }
 </style>
 <script type="text/javascript">
-	//creating the array for superhero names
-	var superHero1 = ["Super", "Wonder", "Bat", "Black", "Cat", "Atom", "Captain", "Invisible",
-					  "Iron", "Atom", "Agent", "Ant", "Big", "Beast", "Doctor", "Green",
-					  "Hawk", "Lightning", "Machine", "Power", "Phantom", "Spider"];
-	var superHero2 = ["Man", "Woman", "Girl", "Widow", "America", "Boy", "Zero", "Lightning",
-					  "Bolt", "Marvel", "Strange", "Arrow", "Eye", "Lord"];
-	//creating the array for supervillain names
-	var superVillain1 = ["Doctor", "Lex", "Cat", "Two", "Red", "Black", "Captain", "Doctor",
-					 "Mr.", "General", "Professor", "Death", "Cyborg", "Gorilla", "Vandal", "Dead",
-					 "Harley", "Doom", "Anti", "Scare", "Poison", "Sand", "Clay", "Omega",
-					 "Master"];
-	var superVillain2 = ["Doom", "Luthor", "Woman", "Face", "Skull", "Cold", "Octopus", "Sinister",
-					 "Zod", "Zoom", "Strike", "Superman", "Grod", "Savage", "Shot", "Quinn",
-					 "Day", "Monitor", "Crow", "Ivy", "Freeze", "Red", "Mind"];
-	//if clicked on "Superhero?"
-	function superHeroName()
-	{
-		var first = superHero1[Math.floor(Math.random() * superHero1.length)];
-		var last = superHero2[Math.floor(Math.random() * superHero2.length)];
-		var name = first + " " + last;
-    	document.getElementById("result").innerHTML = name;
-	}
-	//if clicked on "Supervillain?"
-	function superVillainName()
-	{
-		var first = superVillain1[Math.floor(Math.random() * superVillain1.length)];
-		var last = superVillain2[Math.floor(Math.random() * superVillain2.length)];
-		var name = first + " " + last;
-		document.getElementById("result").innerHTML = name;
-	}
-	//if clicked on "Surprise Me!"
-	function surprise()
-	{
-		var rand = Math.floor(Math.random() * 11) + 1;
-		//this generates a superhero name
-		if(rand <= 25)
-		{
-			var first = superHero1[Math.floor(Math.random() * superHero1.length)];
-			var last = superHero2[Math.floor(Math.random() * superHero2.length)];
-			var name = first + " " + last;
-    		document.getElementById("result").innerHTML = name;
-		}
-		//this generates a supervillain name
-		else if(rand > 25 && rand <= 50)
-		{
-			var first = superVillain1[Math.floor(Math.random() * superVillain1.length)];
-			var last = superVillain2[Math.floor(Math.random() * superVillain2.length)];
-			var name = first + " " + last;
-			document.getElementById("result").innerHTML = name;
-		}
-		//this generates a superhero-supervillain name
-		else if(rand > 50 && rand <= 75)
-		{
-			var first = superHero1[Math.floor(Math.random() * superHero1.length)];
-			var last = superVillain2[Math.floor(Math.random() * superVillain2.length)];
-			var name = first + " " + last;
-			document.getElementById("result").innerHTML = name;
-		}
-		//this generates a supervillain-superhero name
-		else if(rand >= 100)
-		{
-			var first = superVillain1[Math.floor(Math.random() * superVillain1.length)];
-			var last = superHero2[Math.floor(Math.random() * superHero2.length)];
-			var name = first + " " + last;
-			document.getElementById("result").innerHTML = name;
-		}
-	}
 </script>
 </head>
 <body>
 	<h1>
 		SUPER NAME GENERATOR
 	</h1>
-	<p id="superhero" onclick="superHeroName()">
-		Superhero?
+	<p id="boy">
+		Boy?
 	</p>
 	<p2>
 		<center>
 			OR
 		</center>
 	</p2>
-	<p id="supervillain" onclick="superVillainName()">
-		Supervillain?
+	<p id="girl">
+		Girl?
 	</p>
-	<p2 id="random" onclick="surprise()">
+	<p2>
 		<center>
-			SURPRISE ME!
+			OR
 		</center>
 	</p2>
-	<br>
-	<br>
-	<p2 id="present">
+	<p2 id="neutral">
 		<center>
-			Your Name:
+			Neutral?
 		</center>
 	</p2>
-	<h2 id="result">
-	</h2>
 </body>
 </html>
