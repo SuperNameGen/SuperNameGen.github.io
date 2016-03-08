@@ -137,7 +137,7 @@ p2 {
 	{
 		var rand = Math.floor(Math.random() * 11) + 1;
 		//this generates a superhero name
-		if(rand <= 25)
+		if(rand <= 5)
 		{
 			var first = superHero1[Math.floor(Math.random() * superHero1.length)];
 			var last = superHero2[Math.floor(Math.random() * superHero2.length)];
@@ -145,7 +145,7 @@ p2 {
     		document.getElementById("result").innerHTML = name;
 		}
 		//this generates a supervillain name
-		else if(rand > 25 && rand <= 50)
+		else if(rand > 5 && rand <= 10)
 		{
 			var first = superVillain1[Math.floor(Math.random() * superVillain1.length)];
 			var last = superVillain2[Math.floor(Math.random() * superVillain2.length)];
@@ -153,7 +153,7 @@ p2 {
 			document.getElementById("result").innerHTML = name;
 		}
 		//this generates a superhero-supervillain name
-		else if(rand > 50 && rand <= 75)
+		else if(rand > 10 && rand <= 15)
 		{
 			var first = superHero1[Math.floor(Math.random() * superHero1.length)];
 			var last = superVillain2[Math.floor(Math.random() * superVillain2.length)];
@@ -161,7 +161,7 @@ p2 {
 			document.getElementById("result").innerHTML = name;
 		}
 		//this generates a supervillain-superhero name
-		else if(rand >= 100)
+		else if(rand >= 20)
 		{
 			var first = superVillain1[Math.floor(Math.random() * superVillain1.length)];
 			var last = superHero2[Math.floor(Math.random() * superHero2.length)];
