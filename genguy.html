@@ -1,211 +1,226 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>
-	SUPER NAME GENERATOR
-</title>
-<!--mobile friendly code-->
-<meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes"/>
-<!--first font-->
-<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
-<!--second font-->
-<link href='https://fonts.googleapis.com/css?family=Krona+One' rel='stylesheet' type='text/css'>
-<style>
-/**
-    Mobile CSS
-**/
-@media screen
-{
-	h1 {
-		font-size:200%;
-	}
-	#guy {
-		font-size:100%;
-	}
-	p2 {
-		font-size:75%;
-	}
-	#girl {
-		font-size:100%;
-	}
-	#neutral {
-		font-size:100%;
-	}
-}
-/*background css*/
-body {
-    background-image:url(background.png);
-    background-repeat:no-repeat;
-    background-position:center;
-    background-attachment:fixed;
-    background-size:cover;
-}
-/*'main header' css*/
-#header a {
-	text-decoration:none;
-	font-family:'Yanone Kaffeesatz', sans-serif;
-	text-align:center;
-	color:#ffff4d;
-	font-size:350%;
-}
-/*'superhero' option css*/
-#superhero {
-	text-align:center;
-	cursor:pointer;
-	font-family:'Krona One', sans-serif;
-	color:#ffffff;
-	font-size:200%;
-}
-#superhero:hover {
-	color:#005be6;
-}
-/*'or' css*/
-p2 {
-	text-align:center;
-	font-family:'Krona One', sans-serif;
-	color:#ffffff;
-	font-size:150%;
-}
-/*'super-villain' option css*/
-#supervillain {
-	text-align:center;
-	cursor:pointer;
-	font-family:'Krona One', sans-serif;
-	color:#ffffff;
-	font-size:200%;
-}
-#supervillain:hover {
-	color:#e60000;
-}
-/*'surprise me' css*/
-#random {
-	text-align:center;
-	background-color:transparent;
-	cursor:pointer;
-	font-family:'Krona One', sans-serif;
-	color:#ffffff;
-    font-size:200%;
-}
-#random:hover {
-	color:#835b98;
-}
-/*'your name' css*/
-#present {
-	text-align:center;
-	font-family:'Yanone Kaffeesatz', sans-serif;
-	color:#bfbfbf;
-	font-size:300%;
-}
-/*name generated css*/
-#result {
-	text-align:center;
-	padding-top:10px;
-	font-family:'Krona One', sans-serif;
-	color:#bfbfbf;
-	font-size:215%;
-}
-</style>
-<script type="text/javascript">
-	//creating the array for superhero names
-	var superHero1 = ["Super", "Bat", "Black", "Atom", "Captain", "Invisible",
-					  "Iron", "Atom", "Agent", "Ant", "Big", "Beast", "Doctor", "Green",
-					  "Hawk", "Lightning", "Machine", "Power", "Phantom", "Spider"];
-	var superHero2 = ["Man", "America", "Boy", "Zero", "Lightning",
-					  "Bolt", "Marvel", "Strange", "Arrow", "Eye", "Lord"];
-	//creating the array for supervillain names
-	var superVillain1 = ["Doctor", "Lex", "Two", "Red", "Black", "Captain", "Doctor",
-					 "Mr.", "General", "Professor", "Death", "Cyborg", "Gorilla", "Vandal", "Dead",
-					 "Doom", "Anti", "Scare", "Poison", "Sand", "Clay", "Omega",
-					 "Master"];
-	var superVillain2 = ["Doom", "Luthor", "Face", "Skull", "Cold", "Octopus", "Sinister",
-					 "Zod", "Zoom", "Strike", "Superman", "Grod", "Savage", "Shot",
-				     "Day", "Monitor", "Crow", "Freeze", "Red", "Mind"];
-	//if clicked on "Superhero?"
-	function superHeroName()
-	{
-		var first = superHero1[Math.floor(Math.random() * superHero1.length)];
-		var last = superHero2[Math.floor(Math.random() * superHero2.length)];
-		var name = first + " " + last;
-    	document.getElementById("result").innerHTML = name;
-	}
-	//if clicked on "Supervillain?"
-	function superVillainName()
-	{
-		var first = superVillain1[Math.floor(Math.random() * superVillain1.length)];
-		var last = superVillain2[Math.floor(Math.random() * superVillain2.length)];
-		var name = first + " " + last;
-		document.getElementById("result").innerHTML = name;
-	}
-	//if clicked on "Surprise Me!"
-	function surprise()
-	{
-		var rand = Math.floor((Math.random() * 20) + 1);
-		//this generates a superhero name
-		if(rand <= 5)
-		{
-			var first = superHero1[Math.floor(Math.random() * superHero1.length)];
-			var last = superHero2[Math.floor(Math.random() * superHero2.length)];
-			var name = first + " " + last;
-    		document.getElementById("result").innerHTML = name;
-		}
-		//this generates a supervillain name
-		else if(rand > 5 && rand <= 10)
-		{
-			var first = superVillain1[Math.floor(Math.random() * superVillain1.length)];
-			var last = superVillain2[Math.floor(Math.random() * superVillain2.length)];
-			var name = first + " " + last;
-			document.getElementById("result").innerHTML = name;
-		}
-		//this generates a superhero-supervillain name
-		else if(rand > 10 && rand <= 15)
-		{
-			var first = superHero1[Math.floor(Math.random() * superHero1.length)];
-			var last = superVillain2[Math.floor(Math.random() * superVillain2.length)];
-			var name = first + " " + last;
-			document.getElementById("result").innerHTML = name;
-		}
-		//this generates a supervillain-superhero name
-		else if(rand >= 20)
-		{
-			var first = superVillain1[Math.floor(Math.random() * superVillain1.length)];
-			var last = superHero2[Math.floor(Math.random() * superHero2.length)];
-			var name = first + " " + last;
-			document.getElementById("result").innerHTML = name;
-		}
-	}
-</script>
-</head>
-<body>
-	<h1 id="header">
-		<a href="https://supernamegen.github.io//">
-			<center>
-				SUPER NAME GENERATOR
-			</center>
-		</a>
-	</h1>
-	<p id="superhero" onclick="superHeroName()">
-		Superhero?
-	</p>
-	<p2>
-		<center>
-			OR
-		</center>
-	</p2>
-	<p id="supervillain" onclick="superVillainName()">
-		Supervillain?
-	</p>
-	<p2 id="random" onclick="surprise()">
-		<center>
-			SURPRISE ME!
-		</center>
-	</p2>
-	<br>
-	<p2 id="present">
-		<center>
-			Your Name:
-		</center>
-	</p2>
-	<h2 id="result">
-	</h2>
-</body>
+    <head>
+        <title>
+            SUPER NAME GENERATOR
+        </title>
+        <!--mobile friendly code-->
+        <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes"/>
+        <!--first font-->
+        <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+        <!--second font-->
+        <link href='https://fonts.googleapis.com/css?family=Krona+One' rel='stylesheet' type='text/css'>
+        <style>
+            /**
+                Mobile CSS
+            **/
+            @media screen
+            {
+                h1 {
+                    font-size:200%;
+                }
+                #guy {
+                    font-size:100%;
+                }
+                p2 {
+                    font-size:75%;
+                }
+                #girl {
+                    font-size:100%;
+                }
+                #neutral {
+                    font-size:100%;
+                }
+            }
+            /*
+                background css
+            */
+            body {
+                background-image:url(background.png);
+                background-repeat:no-repeat;
+                background-position:center;
+                background-attachment:fixed;
+                background-size:cover;
+            }
+            /*
+                'main header' css
+            */
+            #header {
+                text-align:center;
+            }
+            #header a {
+                text-decoration:none;
+                font-family:'Yanone Kaffeesatz', sans-serif;
+                color:#ffff4d;
+                font-size:350%;
+            }
+            /*
+                'superhero' option css
+            */
+            #superhero {
+                text-align:center;
+                cursor:pointer;
+                font-family:'Krona One', sans-serif;
+                color:#ffffff;
+                font-size:200%;
+            }
+            #superhero:hover {
+                color:#005be6;
+            }
+            /*
+                'or' css
+            */
+            p2 {
+                font-family:'Krona One', sans-serif;
+                color:#ffffff;
+                font-size:150%;
+            }
+            /*
+                'super-villain' option css
+            */
+            #supervillain {
+                text-align:center;
+                cursor:pointer;
+                font-family:'Krona One', sans-serif;
+                color:#ffffff;
+                font-size:200%;
+            }
+            #supervillain:hover {
+                color:#e60000;
+            }
+            /*
+                'surprise me' css
+            */
+            #random {
+                text-align:center;
+                background-color:transparent;
+                cursor:pointer;
+                font-family:'Krona One', sans-serif;
+                color:#ffffff;
+                font-size:200%;
+            }
+            #random:hover {
+                color:#835b98;
+            }
+            /*
+                'your name' css
+            */
+            #present {
+                text-align:center;
+                font-family:'Yanone Kaffeesatz', sans-serif;
+                color:#bfbfbf;
+                font-size:300%;
+            }
+            /*
+                name generated css
+            */
+            #result {
+                text-align:center;
+                padding-top:10px;
+                font-family:'Krona One', sans-serif;
+                color:#bfbfbf;
+                font-size:215%;
+            }
+        </style>
+        <script type="text/javascript">
+            //creating the array for superhero names
+            var superHero1 = ["Super", "Bat", "Black", "Atom", "Captain", "Invisible",
+                              "Iron", "Atom", "Agent", "Ant", "Big", "Beast", "Doctor", "Green",
+                              "Hawk", "Lightning", "Machine", "Power", "Phantom", "Spider"];
+            var superHero2 = ["Man", "America", "Boy", "Zero", "Lightning",
+                              "Bolt", "Marvel", "Strange", "Arrow", "Eye", "Lord"];
+            //creating the array for supervillain names
+            var superVillain1 = ["Doctor", "Lex", "Two", "Red", "Black", "Captain", "Doctor",
+                             "Mr.", "General", "Professor", "Death", "Cyborg", "Gorilla", "Vandal", "Dead",
+                             "Doom", "Anti", "Scare", "Poison", "Sand", "Clay", "Omega",
+                             "Master"];
+            var superVillain2 = ["Doom", "Luthor", "Face", "Skull", "Cold", "Octopus", "Sinister",
+                             "Zod", "Zoom", "Strike", "Superman", "Grod", "Savage", "Shot",
+                             "Day", "Monitor", "Crow", "Freeze", "Red", "Mind"];
+            //if clicked on "Superhero?"
+            function superHeroName()
+            {
+                var first = superHero1[Math.floor(Math.random() * superHero1.length)];
+                var last = superHero2[Math.floor(Math.random() * superHero2.length)];
+                var name = first + " " + last;
+                document.getElementById("result").innerHTML = name;
+            }
+            //if clicked on "Supervillain?"
+            function superVillainName()
+            {
+                var first = superVillain1[Math.floor(Math.random() * superVillain1.length)];
+                var last = superVillain2[Math.floor(Math.random() * superVillain2.length)];
+                var name = first + " " + last;
+                document.getElementById("result").innerHTML = name;
+            }
+            //if clicked on "Surprise Me!"
+            function surprise()
+            {
+                var rand = Math.floor((Math.random() * 20) + 1);
+                //this generates a superhero name
+                if(rand <= 5)
+                {
+                    var first = superHero1[Math.floor(Math.random() * superHero1.length)];
+                    var last = superHero2[Math.floor(Math.random() * superHero2.length)];
+                    var name = first + " " + last;
+                    document.getElementById("result").innerHTML = name;
+                }
+                //this generates a supervillain name
+                else if(rand > 5 && rand <= 10)
+                {
+                    var first = superVillain1[Math.floor(Math.random() * superVillain1.length)];
+                    var last = superVillain2[Math.floor(Math.random() * superVillain2.length)];
+                    var name = first + " " + last;
+                    document.getElementById("result").innerHTML = name;
+                }
+                //this generates a superhero-supervillain name
+                else if(rand > 10 && rand <= 15)
+                {
+                    var first = superHero1[Math.floor(Math.random() * superHero1.length)];
+                    var last = superVillain2[Math.floor(Math.random() * superVillain2.length)];
+                    var name = first + " " + last;
+                    document.getElementById("result").innerHTML = name;
+                }
+                //this generates a supervillain-superhero name
+                else if(rand >= 20)
+                {
+                    var first = superVillain1[Math.floor(Math.random() * superVillain1.length)];
+                    var last = superHero2[Math.floor(Math.random() * superHero2.length)];
+                    var name = first + " " + last;
+                    document.getElementById("result").innerHTML = name;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="header">
+            <a href="https://supernamegen.github.io//">
+                SUPER NAME GENERATOR
+            </a>
+        </h1>
+        <p id="superhero" onclick="superHeroName()">
+            Superhero?
+        </p>
+        <p2>
+            <center>
+                OR
+            </center>
+        </p2>
+        <p id="supervillain" onclick="superVillainName()">
+            Supervillain?
+        </p>
+        <p2 id="random" onclick="surprise()">
+            <center>
+                SURPRISE ME!
+            </center>
+        </p2>
+        <br>
+        <p2 id="present">
+            <center>
+                Your Name:
+            </center>
+        </p2>
+        <h2 id="result">
+        </h2>
+    </body>
 </html>
