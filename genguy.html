@@ -141,6 +141,13 @@
             //if clicked on "Superhero?"
             function superHeroName()
             {
+                if (superhero1.equals("black") && (superhero2.equals("man") || superhero2.equals("boy")))
+                {
+                    var first = superHero1[Math.floor(Math.random() * superHero1.length)];
+                    var last = superHero2[Math.floor(Math.random() * superHero2.length)];
+                    var name = first + " " + last;
+                    document.getElementById("result").innerHTML = name;
+                }
                 var first = superHero1[Math.floor(Math.random() * superHero1.length)];
                 var last = superHero2[Math.floor(Math.random() * superHero2.length)];
                 var name = first + " " + last;
