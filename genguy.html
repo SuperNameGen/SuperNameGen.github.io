@@ -125,7 +125,7 @@
         </style>
         <script type="text/javascript">
             //creating the array for superhero names
-            var superHero1 = ["Super", "Bat", "Black", "Atom", "Captain", "Invisible",
+            var superHero1 = ["Super", "Bat", "Atom", "Captain", "Invisible",
                               "Iron", "Atom", "Agent", "Ant", "Big", "Beast", "Doctor", "Green",
                               "Hawk", "Lightning", "Machine", "Power", "Phantom", "Spider"];
             var superHero2 = ["Man", "America", "Boy", "Zero", "Lightning",
@@ -138,19 +138,11 @@
             var superVillain2 = ["Doom", "Luthor", "Face", "Skull", "Cold", "Octopus", "Sinister",
                              "Zod", "Zoom", "Strike", "Superman", "Grod", "Savage", "Shot",
                              "Day", "Monitor", "Crow", "Freeze", "Red", "Mind"];
-            //To prevent offensive names
-            var exclude1 = ["black"];
-            var exclude2 = ["man","boy"];
             //if clicked on "Superhero?"
             function superHeroName()
             {
                 var first = superHero1[Math.floor(Math.random() * superHero1.length)];
                 var last = superHero2[Math.floor(Math.random() * superHero2.length)];
-                if (first.contains(exclude1) && last.contains(exclude2))
-                {
-                    var first = superHero1[Math.floor(Math.random() * superHero1.length)];
-                    var last = superHero2[Math.floor(Math.random() * superHero2.length)];
-                }
                 var name = first + " " + last;
                 document.getElementById("result").innerHTML = name;
             }
