@@ -51,7 +51,7 @@
             /*
                 'or' css
             */
-            p2 {
+            p {
                 text-align:center;
                 font-family:'Krona One', sans-serif;
                 color:#ffffff;
@@ -74,6 +74,7 @@
                 'surprise me' css
             */
             #random {
+				text-align:center;
                 background-color:transparent;
                 cursor:pointer;
                 font-family:'Krona One', sans-serif;
@@ -87,6 +88,7 @@
                 'your name' css
             */
             #present {
+				text-align:center;
                 font-family:'Yanone Kaffeesatz', sans-serif;
                 color:#bfbfbf;
                 font-size:300%;
@@ -95,6 +97,7 @@
                 name generated css
             */
             #result {
+				text-align:center;
                 padding-top:10px;
                 font-family:'Krona One', sans-serif;
                 color:#bfbfbf;
@@ -182,27 +185,19 @@
         <p id="superhero" onclick="superHeroName()">
             Superhero?
         </p>
-        <p2>
-            <center>
-                OR
-            </center>
-        </p2>
+        <p>
+			OR
+        </p>
         <p id="supervillain" onclick="superVillainName()">
             Supervillain?
         </p>
-        <p2 id="random" onclick="surprise()">
-            <center>
-                SURPRISE ME!
-            </center>
-        </p2>
-        <p2 id="present">
-            <center>
-                Your Name:
-            </center>
-        </p2>
-        <p2 id="result">
-			<center>
-			</center>
-        </p2>
+        <p id="random" onclick="surprise()">
+			SURPRISE ME!
+        </p>
+        <p id="present">
+ 			Your Name:
+        </p>
+        <p id="result">
+        </p>
     </body>
 </html>
